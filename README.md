@@ -1,4 +1,4 @@
-# resume_screening
+# HR-Resume Screening Helper
 
 # Description
 
