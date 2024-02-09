@@ -292,7 +292,7 @@ with tab1:
         score = compare(uploaded_file_paths, JD, flag)
         if score is not None:
           success_placeholder = st.empty()
-          time.sleep(5)
+          time.sleep(10)
           success_placeholder.success("Analysis done! Please go to result tab.")
           # Wait for 5 seconds
           time.sleep(5)
