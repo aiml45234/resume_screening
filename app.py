@@ -19,6 +19,7 @@ import datetime
 import base64
 # import pyautogui
 import shutil
+import time
 
 
 st.set_page_config(page_title="Resume Screening Helper")
@@ -102,7 +103,12 @@ def reload_page():
          if reloads:
          
           if 'uploaded_done' not in st.session_state: 
-               st.success("No Session Created")
+              success_placeholder = st.empty()
+              success_placeholder.success("Reset Data Successfully!")
+              # Wait for 5 seconds
+              time.sleep(5)
+              # Remove the success message
+              success_placeholder.empty()
           else:           
           #  st.success("Page Reset Successfully")           
             shutil.rmtree(st.session_state.upload)
@@ -273,6 +279,15 @@ with tab1:
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
+    else:
+        success_placeholder = st.empty()
+        success_placeholder.success("Please enter a job description and upload CV's before start analysis")
+
+              # Wait for 5 seconds
+        time.sleep(5)
+
+              # Remove the success message
+        success_placeholder.empty()
     if reloads:
         reload_page()    
         
