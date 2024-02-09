@@ -5,3 +5,4 @@ pdfplumber
 nltk
 gensim
 scikit-learn
+spacy
