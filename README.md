@@ -1,6 +1,6 @@
 # HR-Resume Screening Helper
 
-# Description
+# Description:
 
 The HR - Resume Screening Assistant is a powerful web application designed to revolutionize the way you screen resumes for job openings. Say goodbye to manual sorting and welcome intelligent automation. This application allows you to:
 
@@ -11,7 +11,7 @@ The HR - Resume Screening Assistant is a powerful web application designed to re
 
 **Spend less time sifting through resumes and more time finding your next superstar!**
 
-# Features
+# Features:
 
 - **Intelligent Resume Screening**: Utilizes advanced natural language processing with BERT algorithm to match resumes with job descriptions.
 - **Multi-Resume Upload**: Upload and analyze multiple resumes in one go.
