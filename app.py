@@ -242,7 +242,7 @@ button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
 """
 
 st.write(font_css, unsafe_allow_html=True)
-tab1, tab2 = st.tabs(["**🏠 Home**", "**📝 Results**"])
+tab1, tab2 = st.tabs(["**🏠 HOME**", "**📝 RESULTS**"])
 
 # Tab Home
 with tab1:
