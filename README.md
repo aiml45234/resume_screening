@@ -9,7 +9,7 @@ The HR - Resume Screening Assistant is a powerful web application designed to re
 - Instantly retrieve the most relevant resumes.
 - Download a Matched CV's.
 
-# Spend less time sifting through resumes and more time finding your next superstar!
+** Spend less time sifting through resumes and more time finding your next superstar! **
 
 # Features
 
