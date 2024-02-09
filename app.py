@@ -279,15 +279,7 @@ with tab1:
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
-    else:
-        success_placeholder = st.empty()
-        success_placeholder.success("Please enter a job description and upload CV's before start analysis")
-
-              # Wait for 5 seconds
-        time.sleep(5)
-
-              # Remove the success message
-        success_placeholder.empty()
+   
     if reloads:
         reload_page()    
         
