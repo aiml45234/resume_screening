@@ -297,7 +297,7 @@ with tab1:
           time.sleep(10)
           # Remove the success message
           success_placeholder.empty()
-          success_placeholder.success("Process completed! Please go to result tab")
+          success_placeholder.success("Process completed! Please go to results tab")
           # Wait for 5 seconds
           time.sleep(5)
           # Remove the success message
