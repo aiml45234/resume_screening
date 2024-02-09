@@ -315,8 +315,8 @@ with tab2:
              with st.expander(str(key),expanded=True):
                 # st.write("Score is: ", values)
                 st.info(f"**Match Score**: {value}")
-                summary = summary_text(my_dict_temp[key])
-                st.info(f"**Summary**: {summary}")                                 
+                # summary = summary_text(my_dict_temp[key])
+                # st.info(f"**Summary**: {summary}")                                 
                 file_path = os.path.join(st.session_state.upload, key)
                 with open(file_path, "rb") as file:
                     file_contents = file.read()
