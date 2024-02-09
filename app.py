@@ -297,12 +297,12 @@ with tab1:
           time.sleep(10)
           # Remove the success message
           success_placeholder.empty()
-          success_placeholder.success("Generating results successfully!")
+          success_placeholder.success("Process completed! Please go to result tab")
           # Wait for 5 seconds
           time.sleep(5)
           # Remove the success message
           success_placeholder.empty()
-          # st.success("Analysis done! Please go to result tab.")  
+          # st.success("Analysis done! Please go to results tab.")  
     else:
         start_analysis()
     if reloads:
