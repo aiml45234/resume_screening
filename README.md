@@ -17,3 +17,6 @@ The HR - Resume Screening Assistant is a powerful web application designed to re
 - **Multi-Resume Upload**: Upload and analyze multiple resumes in one go.
 - **Customizable Settings**: Adjust the number of resumes to return to suit your needs.
 - **Downloadable CV's**: Download matched cv's profile
+
+## Workflow:
+<img src = "https://github.com/aiml45234/resume_screening/blob/main/Workflow.png">
