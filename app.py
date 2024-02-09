@@ -25,7 +25,7 @@ import time
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
-button_disabled = False
+
 
 if 'session_id' not in st.session_state:
     st.session_state['session_id'] =''
@@ -279,7 +279,7 @@ with tab1:
     col1, col2 = st.columns([5.5,1])
 
     with col1:
-        comp_pressed = st.button("Start Analysis!",disabled=button_disabled)                          
+        comp_pressed = st.button("Start Analysis!")                          
     with col2:
         reloads = st.button("Reset Page")
    
@@ -288,8 +288,7 @@ with tab1:
     # reloads = st.button("Reset Page")
           
     if comp_pressed and uploaded_files:
-        button_disabled = True
-        comp_pressed = st.button("Start Analysis!",disabled=button_disabled)
+        
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
