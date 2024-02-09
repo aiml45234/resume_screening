@@ -294,7 +294,7 @@ with tab1:
           success_placeholder = st.empty()
           success_placeholder.success("Analysis completed successfully! Wait for few seconds for generating results")
           # Wait for 5 seconds
-          time.sleep(5)
+          time.sleep(10)
           # Remove the success message
           success_placeholder.empty()
           success_placeholder.success("Generating results successfully!")
