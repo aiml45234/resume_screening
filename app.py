@@ -291,7 +291,13 @@ with tab1:
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
         if score is not None:
-          st.success("Analysis done! Please go to result tab.")  
+          success_placeholder = st.empty()
+          success_placeholder.success("Analysis done! Please go to result tab.")
+          # Wait for 5 seconds
+          time.sleep(5)
+          # Remove the success message
+          success_placeholder.empty()
+          # st.success("Analysis done! Please go to result tab.")  
     else:
         start_analysis()
     if reloads:
