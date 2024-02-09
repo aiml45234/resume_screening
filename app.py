@@ -289,6 +289,7 @@ with tab1:
           
     if comp_pressed and uploaded_files:
         button_disabled = True
+        comp_pressed = st.button("Start Analysis!",disabled=button_disabled)
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
