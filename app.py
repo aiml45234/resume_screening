@@ -290,6 +290,8 @@ with tab1:
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
+        if score is not None:
+          st.success("Analysis done! Please go to result tab.")  
     else:
         start_analysis()
     if reloads:
