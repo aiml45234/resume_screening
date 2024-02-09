@@ -98,7 +98,18 @@ def get_HF_embeddings(sentences):
  
   
   return embeddings
-  
+
+def start_analysis():
+  if comp_pressed:
+    success_placeholder = st.empty()
+    success_placeholder.success("Please enter a job description and upload CV's")
+
+    # Wait for 5 seconds
+    time.sleep(5)
+
+              # Remove the success message
+    success_placeholder.empty()
+
 def reload_page():
          if reloads:
          
@@ -279,7 +290,8 @@ with tab1:
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
-   
+    else:
+        start_analysis()
     if reloads:
         reload_page()    
         
