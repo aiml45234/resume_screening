@@ -85,6 +85,9 @@ def set_main_style(side_bg):
       [data-testid="stHeader"] {{
         background: rgba(0,0,0,0);
       }}
+      [data-testid="stAppViewBlockContainer"] {{
+        padding: 1rem;
+      }}
       </style>
       """,
       unsafe_allow_html=True,
