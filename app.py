@@ -32,8 +32,10 @@ hide_streamlit_style = """
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             .st-emotion-cache-1y4p8pa {
-                    margin-top: -110px;
-                }
+                 padding-left: 1rem;
+                 padding-right: 1rem;
+                 margin-top:-80px !important;
+             }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
