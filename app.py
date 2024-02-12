@@ -267,7 +267,7 @@ with st.sidebar:
 
 
 # Main content
-set_main_style("main_bg.png")
+# set_main_style("main_bg.png")
 font_css = """
 <style>
 button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
