@@ -251,7 +251,7 @@ with st.sidebar:
 # Main content
 hide_streamlit_style = """
 <style>
-.css-hi6a2p {padding-top: 0rem;}
+.stAppViewBlockContainer {padding-top: 0rem;}
 </style>
 
 """
