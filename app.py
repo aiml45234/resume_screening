@@ -26,7 +26,7 @@ st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
 
-st.markdown(alert("Hello from JavaScript!"), unsafe_allow_html=True)
+
 
 hide_streamlit_style = """
             <style>
@@ -64,6 +64,9 @@ def set_sidebar_style(side_bg):
           background-position: center;
           background-size: cover;
       }}
+      .st-emotion-cache-1y4p8pa {{
+                    margin-top: -110px;
+                }}
       </style>
       """,
       unsafe_allow_html=True,
