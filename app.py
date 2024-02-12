@@ -319,8 +319,8 @@ tab1, tab2 = st.tabs(["**🏠 HOME**", "**📝 RESULTS**"])
 # Tab Home
 with tab1:
     # st.set_page_config(page_title="Resume Screening Helper")
-    # title = '<p style="color:#ff4d04; text-align: center; margin-top: 20px; font-size: 25px;"><b>HR - Resume Screening Helper </b></p>'
-    # st.markdown(title, unsafe_allow_html=True)
+    title = '<p style="color:#ff4d04; text-align: center; margin-top: 20px; font-size: 25px;"><b>HR - Resume Screening Helper </b></p>'
+    st.markdown(title, unsafe_allow_html=True)
     JD = st.text_area("**Enter the job description:**",height=150)
     uploaded_files = st.file_uploader(
         '**Choose your resume.pdf file:** ', type="pdf", accept_multiple_files=True)
