@@ -21,15 +21,7 @@ import base64
 import shutil
 import time
 
-st.markdown(f'''
-            <style>
-                .st-emotion-cache-1y4p8pa {{
-                    margin-top: -110px;
-                }}
-                
-            </style>
-            ''', unsafe_allow_html=True,
-)
+
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
@@ -39,6 +31,9 @@ hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            .st-emotion-cache-1y4p8pa {
+                    margin-top: -110px;
+                }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
