@@ -72,7 +72,7 @@ def set_main_style(side_bg):
       f"""
       <style>
       [data-testid="stAppViewContainer"] > .main {{
-          background-color: #FFFAF6;
+          background-color: #FFFAF9;
           # background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
           # background-position: right center;
           background-size: 100vw 100vh;
