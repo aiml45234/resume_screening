@@ -249,13 +249,7 @@ with st.sidebar:
 
 
 # Main content
-hide_streamlit_style = """
-<style>
-.st-emotion-cache-1y4p8pa {padding: 2rem 1rem 4rem;}
-</style>
 
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 font_css = """
 <style>
 button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
