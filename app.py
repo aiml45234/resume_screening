@@ -347,7 +347,7 @@ with tab1:
                   f.write(pdf.read()) 
                       
                           
-    col1, col2 = st.columns([6.5,1])
+    col1, col2 = st.columns([5.5,1])
 
     with col1:
         comp_pressed = st.button("Start Analysis!")                          
