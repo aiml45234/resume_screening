@@ -25,14 +25,7 @@ import time
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
-# Custom CSS to change text color to white in dark mode
-custom_css = """
-<style>
-body.darkMode {
-    color: #000000;
-}
-</style>
-"""
+
 
 # Inject custom CSS into Streamlit app
 st.markdown(custom_css, unsafe_allow_html=True)
