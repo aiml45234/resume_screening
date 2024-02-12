@@ -37,15 +37,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-custom_css = """
-<style>
-/* CSS code */
-.st-emotion-cache-1y4p8pa {
-   margin-top = -90px;
-}
-</style>
-"""
-st.markdown(custom_css, unsafe_allow_html=True)
+
 
 if 'session_id' not in st.session_state:
     st.session_state['session_id'] =''
