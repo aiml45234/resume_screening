@@ -232,7 +232,7 @@ with st.sidebar:
         <style>
         /* Specify the background image URL and other styles */
         .sidebar .sidebar-content {
-            background-image: "sidebar_bg.png";
+            background: "sidebar_bg.png";
             background-size: cover; /* or 'contain' */
             /* Add additional styling properties as needed */
         }
