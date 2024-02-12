@@ -96,7 +96,7 @@ def set_main_style(side_bg):
       f"""
       <style>
       [data-testid="stAppViewContainer"] > .main {{
-          background-color: #FFD580;
+          background-color: #FCF2EA;
           # background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
           # background-position: right center;
           background-size: 100vw 100vh;
@@ -108,6 +108,7 @@ def set_main_style(side_bg):
       }}
       [data-testid="stHeader"] {{
         background: rgba(0,0,0,0);
+        display: none;
       }}
       
       
