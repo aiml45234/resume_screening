@@ -68,7 +68,11 @@ def set_main_style(side_bg):
           background-position: center;
           background-size: 100vw 100vh;
           background-size: cover;
+          background-attachment: local;
           
+      }}
+      [data-testid="stHeader"] {{
+        background: rgba(0,0,0,0);
       }}
       </style>
       """,
@@ -267,7 +271,7 @@ with st.sidebar:
 
 
 # Main content
-# set_main_style("main_bg.png")
+set_main_style("main_bg.png")
 font_css = """
 <style>
 button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
