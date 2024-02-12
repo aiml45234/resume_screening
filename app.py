@@ -34,6 +34,14 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
+st.markdown("""
+        <style>
+               .block-container {
+                    padding: 1rem;                  
+                }
+        </style>
+        """, unsafe_allow_html=True)
+
 
 if 'session_id' not in st.session_state:
     st.session_state['session_id'] =''
