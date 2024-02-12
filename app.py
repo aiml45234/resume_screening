@@ -34,19 +34,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-    st.markdown(
-        """
-            <style>
-                .appview-container .main .block-container {{
-                    padding-top: {padding_top}rem;
-                    padding-bottom: {padding_bottom}rem;
-                    }}
-
-            </style>""".format(
-            padding_top=1, padding_bottom=1
-        ),
-        unsafe_allow_html=True,
-    )
+    
 
 
 if 'session_id' not in st.session_state:
