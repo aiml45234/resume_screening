@@ -27,6 +27,7 @@ uploaded_file_path = ""
 rest_flag = False
 javascript_code = """
 <script>
+   alert("Hello from JavaScript!");
    document.querySelector('.st-emotion-cache-1y4p8pa'); if (element) { element.style.marginTop = '-90px'; }
 </script>
 """
