@@ -41,23 +41,19 @@ def extract_pdf_data(file_path):
                 data += text
     return data
 
-def set_sidebar_style():
-    """
-    Set custom styles for the sidebar using CSS.
-    """
-    st.markdown(
-        """
-        <style>
-        /* Specify the background image URL and other styles */
-        .sidebar .sidebar-content {
-            background-image: "sidebar_bg.png";
-            background-size: cover; /* or 'contain' */
-            /* Add additional styling properties as needed */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+def set_sidebar_style(bg_image):
+   side_bg_ext = 'png'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
 
 
 def summary_text(resume):
@@ -227,19 +223,7 @@ with st.sidebar:
         }
     </style>
 """, unsafe_allow_html=True)
-    st.markdown(
-        """
-        <style>
-        /* Specify the background image URL and other styles */
-        .sidebar .sidebar-content {
-            background: "sidebar_bg.png";
-            background-size: cover; /* or 'contain' */
-            /* Add additional styling properties as needed */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+    set_sidebar_style("sidebar_bg.png")
     st.image("techforce_tf.png")
     desired_count = st.slider("**Number of 'RESUMES' to return**", 1, 50, 10, key="2")
     st.markdown('**Which embedding do you want to use**')
