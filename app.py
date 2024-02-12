@@ -227,7 +227,7 @@ with st.sidebar:
 """, unsafe_allow_html=True)
     set_sidebar_style("sidebar_bg.png")
     st.image("techforce_tf.png")
-    desired_count = st.slider("**Number of 'RESUMES' to return**", 1, 50, 10, key="2")
+    desired_count = st.slider("**Number of 'RESUMES' to return**", 1, 50, 2, key="2")
     st.markdown('**Which embedding do you want to use**')
     options = st.selectbox('Which embedding do you want to use',
                            ['HuggingFace-BERT', 'Doc2Vec'],
