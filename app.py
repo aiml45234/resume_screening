@@ -21,7 +21,7 @@ import base64
 import shutil
 import time
 
-
+<script src="https://cdn.tailwindcss.com"></script>
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
@@ -35,15 +35,6 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-st.markdown(f'''
-            <style>
-                .block-container .st-emotion-cache-1y4p8pa ea3mdgi5  {{
-                    padding:2rem;
-                }}
-                
-            </style>
-            ''', unsafe_allow_html=True,
-)
 
 
 if 'session_id' not in st.session_state:
@@ -92,6 +83,9 @@ def set_main_style(side_bg):
           # background-attachment: fixed;
           # background-repeat: no-repeat;
           
+      }}
+      [data-testid="stHeader"] {{
+        background: rgba(0,0,0,0);
       }}
       [data-testid="stHeader"] {{
         background: rgba(0,0,0,0);
