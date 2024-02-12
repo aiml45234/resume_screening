@@ -63,7 +63,7 @@ def set_main_style(side_bg):
    st.markdown(
       f"""
       <style>
-      [data-testid="stAppViewBlockContainer"] > div:first-child {{
+      [data-testid="stApp"] > div:first-child {{
           background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
           background-position: center;
           background-size: cover;
@@ -265,7 +265,7 @@ with st.sidebar:
 
 
 # Main content
-# set_main_style("main_bg.png")
+set_main_style("main_bg.png")
 font_css = """
 <style>
 button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
