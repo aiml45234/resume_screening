@@ -214,7 +214,7 @@ if len(sys.argv) > 1:
 
 # Sidebar
 flag = 'HuggingFace-BERT'
-set_sidebar_style()
+
 with st.sidebar:
     st.markdown("""
     <style>
@@ -227,6 +227,19 @@ with st.sidebar:
         }
     </style>
 """, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <style>
+        /* Specify the background image URL and other styles */
+        .sidebar .sidebar-content {
+            background-image: "sidebar_bg.png";
+            background-size: cover; /* or 'contain' */
+            /* Add additional styling properties as needed */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     st.image("techforce_tf.png")
     desired_count = st.slider("**Number of 'RESUMES' to return**", 1, 50, 10, key="2")
     st.markdown('**Which embedding do you want to use**')
