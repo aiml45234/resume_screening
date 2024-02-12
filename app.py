@@ -76,7 +76,7 @@ def set_main_style(side_bg):
           background-position: right center;
           background-size: 100vw 100vh;
           background-size: cover;
-          background-attachment: inherit;
+          background-attachment: initial;
           
       }}
       [data-testid="stHeader"] {{
