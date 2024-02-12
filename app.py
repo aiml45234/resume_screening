@@ -37,8 +37,8 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.markdown(f'''
             <style>
-                .st-emotion-cache-1y4p8pa  {{
-                    padding:1rem;
+                .block-container .st-emotion-cache-1y4p8pa ea3mdgi5  {{
+                    padding:2rem;
                 }}
                 
             </style>
