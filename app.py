@@ -29,7 +29,7 @@ rest_flag = False
 custom_css = """
 <style>
 body.darkMode {
-    color: white;
+    color: #000000;
 }
 </style>
 """
