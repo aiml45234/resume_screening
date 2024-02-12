@@ -72,12 +72,13 @@ def set_main_style(side_bg):
       f"""
       <style>
       [data-testid="stAppViewContainer"] > .main {{
-          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
-          background-position: right center;
+          background-color: #FFFAF6;
+          # background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+          # background-position: right center;
           background-size: 100vw 100vh;
           background-size: cover;
-          background-attachment: fixed;
-          background-repeat: no-repeat;
+          # background-attachment: fixed;
+          # background-repeat: no-repeat;
           
       }}
       [data-testid="stHeader"] {{
