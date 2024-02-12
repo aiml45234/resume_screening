@@ -25,17 +25,18 @@ import time
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
-
+javascript_code = """
+<script>
+ var element = document.querySelector('.st-emotion-cache-1y4p8pa'); if (element) { element.style.marginTop = '-90px'; }
+</script>
+"""
+st.markdown(javascript_code, unsafe_allow_html=True)
 
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-            .st-emotion-cache-1y4p8pa {
-                 padding-left: 1rem;
-                 padding-right: 1rem;
-                 margin-top:-80px !important;
-             }
+            
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
@@ -92,9 +93,7 @@ def set_main_style(side_bg):
       [data-testid="stHeader"] {{
         background: rgba(0,0,0,0);
       }}
-      [data-testid="stHeader"] {{
-        background: rgba(0,0,0,0);
-      }}
+      
       
       </style>
       """,
