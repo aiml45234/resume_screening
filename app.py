@@ -35,7 +35,17 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
+custom_css = """
+<style>
+/* Reduce padding/margin at the top of the page */
+.stApp {
+    padding-top: 10px !important;
+}
+</style>
+"""
 
+# Inject custom CSS into Streamlit app
+st.markdown(custom_css, unsafe_allow_html=True)
 
 
 if 'session_id' not in st.session_state:
