@@ -68,7 +68,7 @@ def set_main_style(side_bg):
           background-position: center;
           background-size: 100vw 100vh;
           background-size: cover;
-           background-repeat: no-repeat;
+          
       }}
       </style>
       """,
