@@ -41,7 +41,7 @@ def extract_pdf_data(file_path):
                 data += text
     return data
 
-def set_sidebar_style(bg_image):
+def set_sidebar_style(side_bg):
    side_bg_ext = 'png'
 
    st.markdown(
