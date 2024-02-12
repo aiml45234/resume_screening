@@ -38,6 +38,14 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.markdown("""
 <style>
+.header__logo {
+  visibility: hidden;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
 .block-container
 {
     padding-top: 1rem;
