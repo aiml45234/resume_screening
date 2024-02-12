@@ -25,6 +25,10 @@ import time
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
+padding_top = 0
+padding_bottom = 10
+padding_left = 1
+padding_right = 10
 
 hide_streamlit_style = """
             <style>
@@ -34,7 +38,20 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-    
+st.markdown(f'''
+            <style>
+                .reportview-container .sidebar-content {{
+                    padding-top: {padding_top}rem;
+                }}
+                .reportview-container .main .block-container {{
+                    padding-top: {padding_top}rem;
+                    padding-right: {padding_right}rem;
+                    padding-left: {padding_left}rem;
+                    padding-bottom: {padding_bottom}rem;
+                }}
+            </style>
+            ''', unsafe_allow_html=True,
+)   
 
 
 if 'session_id' not in st.session_state:
@@ -87,9 +104,7 @@ def set_main_style(side_bg):
       [data-testid="stHeader"] {{
         background: rgba(0,0,0,0);
       }}
-      [data-testid="stAppViewBlockContainer"] {{
-        padding: 1rem;
-      }}
+      
       </style>
       """,
       unsafe_allow_html=True,
