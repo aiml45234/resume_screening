@@ -77,6 +77,7 @@ def set_main_style(side_bg):
           # background-position: right center;
           background-size: 100vw 100vh;
           background-size: cover;
+          padding: 2rem 1rem 4rem;
           # background-attachment: fixed;
           # background-repeat: no-repeat;
           
