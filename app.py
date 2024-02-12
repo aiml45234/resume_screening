@@ -23,14 +23,13 @@ import time
 
 st.markdown(f'''
             <style>
-                .main .block-container {{
-                    padding:1rem;
+                .st-emotion-cache-1y4p8pa {{
+                    margin-top: -110px;
                 }}
                 
             </style>
             ''', unsafe_allow_html=True,
 )
-
 st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
