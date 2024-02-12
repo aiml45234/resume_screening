@@ -249,13 +249,7 @@ with st.sidebar:
 
 
 # Main content
-hide_streamlit_style = """
-<style>
-.stAppViewBlockContainer {padding-top: 0rem;}
-</style>
 
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 font_css = """
 <style>
 button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
