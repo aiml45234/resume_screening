@@ -41,6 +41,25 @@ def extract_pdf_data(file_path):
                 data += text
     return data
 
+def set_sidebar_style():
+    """
+    Set custom styles for the sidebar using CSS.
+    """
+    st.markdown(
+        """
+        <style>
+        /* Specify the background image URL and other styles */
+        .sidebar .sidebar-content {
+            background-image: '';
+            background-size: cover; /* or 'contain' */
+            /* Add additional styling properties as needed */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def summary_text(resume):
   # sentence-transformers/all-mpnet-base-v2
   model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
