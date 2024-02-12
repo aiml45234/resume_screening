@@ -64,7 +64,7 @@ def set_sidebar_style(side_bg):
           background-position: center;
           background-size: cover;
       }}
-      .st-emotion-cache-1y4p8pa {{
+      [class="st-emotion-cache-1y4p8pa"]{{
                     margin-top: -110px;
                 }}
       </style>
