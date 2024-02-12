@@ -63,7 +63,7 @@ def set_main_style(side_bg):
    st.markdown(
       f"""
       <style>
-      [data-testid="stApp"] > div:first-child {{
+      [data-testid="stAppViewContainer"] > .main {{
           background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
           background-position: center;
           background-size: cover;
