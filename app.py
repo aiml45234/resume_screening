@@ -26,15 +26,6 @@ st.set_page_config(page_title="Resume Screening Helper")
 uploaded_file_path = ""
 rest_flag = False
 
-custom_css = """
-<style>
-/* CSS code */
-.st-emotion-cache-1y4p8pa {
-   margin-top = -90px;
-}
-</style>
-"""
-st.markdown(custom_css, unsafe_allow_html=True)
 
 hide_streamlit_style = """
             <style>
