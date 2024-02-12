@@ -77,6 +77,7 @@ def set_main_style(side_bg):
           background-size: 100vw 100vh;
           background-size: cover;
           background-attachment: local;
+          background-repeat: no-repeat;
           
       }}
       [data-testid="stHeader"] {{
