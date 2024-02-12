@@ -57,6 +57,22 @@ def set_sidebar_style(side_bg):
       unsafe_allow_html=True,
       )
 
+def set_main_style(side_bg):
+   side_bg_ext = 'png'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stAppViewContainer"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+          background-position: center;
+          background-size: cover;
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
+
 
 def summary_text(resume):
   # sentence-transformers/all-mpnet-base-v2
