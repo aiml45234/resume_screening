@@ -50,7 +50,7 @@ def set_sidebar_style():
         <style>
         /* Specify the background image URL and other styles */
         .sidebar .sidebar-content {
-            background-image: '';
+            background-image: "sidebar_bg.png";
             background-size: cover; /* or 'contain' */
             /* Add additional styling properties as needed */
         }
@@ -214,6 +214,7 @@ if len(sys.argv) > 1:
 
 # Sidebar
 flag = 'HuggingFace-BERT'
+set_sidebar_style()
 with st.sidebar:
     st.markdown("""
     <style>
