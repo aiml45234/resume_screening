@@ -51,14 +51,14 @@ st.markdown("""
     # padding-top: 1rem;
     # padding-bottom: 0rem;
     # margin-top: 1rem;
-    margin-top:  -130px;
+    margin-top:  -140px;
 }
 .st-emotion-cache-16txtl3 
 {
     # padding-top: 1rem;
     # padding-bottom: 0rem;
     # margin-top: 1rem;
-    margin-top:  -50px;
+    margin-top:  -60px;
 }
 
 </style>
@@ -405,7 +405,7 @@ with tab1:
                       time.sleep(10)
                       # Remove the success message
                       success_placeholder.empty()
-                      success_placeholder.success("Process completed! Please go to results tab")
+                      success_placeholder.success("Process completed! Wait for few seconds for generating results")
                       # Wait for 5 seconds
                       time.sleep(5)
                       # Remove the success message
