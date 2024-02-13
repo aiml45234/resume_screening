@@ -379,11 +379,11 @@ with tab1:
         custom_css = """
             <style>
             /* Center the loader */
-            .loader-container {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+            div.stSpinner {
+                text-align:center;
+                align-items: center;
+                justify-content: center;
+                
             }
             </style>
             """
