@@ -60,13 +60,7 @@ st.markdown("""
     # margin-top: 1rem;
     margin-top:  -60px;
 }
-.st-emotion-cache-eqffof
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 
 </style>
 """, unsafe_allow_html=True)
