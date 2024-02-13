@@ -379,10 +379,11 @@ with tab1:
         custom_css = """
             <style>
             /* Center the loader */
-            div.stSpinner {
-                text-align:center;
-                align-items: center;
+            .loader-container{
+                display: flex;
                 justify-content: center;
+                align-items: center;
+                height: 100vh;
                 
             }
             </style>
@@ -392,7 +393,7 @@ with tab1:
         st.markdown(custom_css, unsafe_allow_html=True)
 
         # Display the loader
-        with st.spinner("Loading..."):
+        with st.spinner("Running Process..."):
                     uploaded_file_paths = [extract_pdf_data(
                     file) for file in uploaded_files]                          
                     score = compare(uploaded_file_paths, JD, flag)
