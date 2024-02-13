@@ -371,7 +371,7 @@ with tab1:
     col1, col2 = st.columns([5.5,1])
 
     with col1:
-        comp_pressed = st.button("Start Analysis!")                          
+        comp_pressed = st.button("Start Analysis")                          
     with col2:
         reloads = st.button("Reset Page")
    
