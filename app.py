@@ -442,12 +442,8 @@ with tab2:
            my_dict_temp[uploaded_files[i].name] = uploaded_file_paths[i]          
         sorted_data = dict(sorted(my_dict.items(), key=lambda item: percentage_to_float(item[1]), reverse=True)[:desired_count])
         
-        for key, value in sorted_data.items():
-             score_float = float(value)
-             if score_float < 50:
-                  score_result = 0
-             else:            
-               with st.expander(str(key),expanded=True):
+        for key, value in sorted_data.items():           
+             with st.expander(str(key),expanded=True):
                 # st.write("Score is: ", values)
                 st.info(f"**JD Match Score**: {value}")
                 # summary = summary_text(my_dict_temp[key])
@@ -456,9 +452,5 @@ with tab2:
                 with open(file_path, "rb") as file:
                     file_contents = file.read()
                     st.write(download_pdf(file_contents, key), unsafe_allow_html=True)
-        if score_result == 0:
-           success_placeholder = st.empty()
-           success_placeholder.success("No Matched Result Found!")
-                      # Wait for 5 seconds
-           time.sleep(10)          
+       
         
