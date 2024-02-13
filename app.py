@@ -443,8 +443,11 @@ with tab2:
         sorted_data = dict(sorted(my_dict.items(), key=lambda item: percentage_to_float(item[1]), reverse=True)[:desired_count])
         
         for key, value in sorted_data.items():
-             
-             with st.expander(str(key),expanded=True):
+             score_float = float(value)
+             if score_float < 50:
+                  score_result = 0
+             else:            
+               with st.expander(str(key),expanded=True):
                 # st.write("Score is: ", values)
                 st.info(f"**JD Match Score**: {value}")
                 # summary = summary_text(my_dict_temp[key])
