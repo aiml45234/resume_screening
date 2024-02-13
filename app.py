@@ -376,7 +376,23 @@ with tab1:
     # reloads = st.button("Reset Page")
           
     if comp_pressed and uploaded_files:
-        
+        custom_css = """
+            <style>
+            /* Center the loader */
+            .loader-container {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            </style>
+            """
+            
+            # Inject custom CSS into Streamlit app
+            st.markdown(custom_css, unsafe_allow_html=True)
+
+        # Display the loader
+        with st.spinner("Loading..."):
         uploaded_file_paths = [extract_pdf_data(
         file) for file in uploaded_files]                          
         score = compare(uploaded_file_paths, JD, flag)
