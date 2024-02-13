@@ -380,13 +380,12 @@ with tab1:
         custom_css = """
             <style>
             /* Center the loader */
-            .loader-container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                
-            }
+            .spinner-container {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+             }
             </style>
             """
             
