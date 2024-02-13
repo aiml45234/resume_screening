@@ -416,7 +416,7 @@ with tab1:
                       time.sleep(10)
                       # Remove the success message
                       success_placeholder.empty()
-                      success_placeholder.success("Process completed! Wait for few seconds for generating results")
+                      # success_placeholder.success("Process completed! Wait for few seconds for generating results")
                       # Wait for 5 seconds
                       time.sleep(5)
                       # Remove the success message
