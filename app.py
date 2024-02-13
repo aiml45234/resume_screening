@@ -389,7 +389,7 @@ with tab1:
             """
             
             # Inject custom CSS into Streamlit app
-            st.markdown(custom_css, unsafe_allow_html=True)
+        st.markdown(custom_css, unsafe_allow_html=True)
 
         # Display the loader
         with st.spinner("Loading..."):
