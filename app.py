@@ -192,7 +192,7 @@ def get_HF_embeddings(sentences):
 def start_analysis():
   if comp_pressed:
     success_placeholder = st.empty()
-    success_placeholder.success("Please enter a job description and upload CV's")
+    success_placeholder.error("Please enter a job description and upload CV's")
 
     # Wait for 5 seconds
     time.sleep(5)
