@@ -430,7 +430,7 @@ with tab1:
 
 # Tab Results
 with tab2:    
-    st.subheader("**Matched Resumes**")
+    # st.subheader("**Matched Resumes**")
     my_dict = {}
     my_dict_temp = {}
     matched_dict = {}
