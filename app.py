@@ -119,12 +119,7 @@ def set_main_style(side_bg):
         background: rgba(0,0,0,0);
         display: none;
       }}
-      [data-testid="stMarkdownContainer"] {{
-         position: fixed;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-      }}
+      
       
       
       
