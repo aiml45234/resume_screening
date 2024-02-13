@@ -380,7 +380,22 @@ with tab1:
     # reloads = st.button("Reset Page")
           
     if comp_pressed and uploaded_files:
-        
+                
+        st.markdown("""
+            <style>
+            .st-emotion-cache-j78z8c {
+                display: flex;
+                gap: 0.5rem;
+                -webkit-box-align: center;
+                align-items: center;
+                width: 100%;
+                margin: 0px auto;
+                justify-content: center;
+            }             
+            
+            </style>
+            """, unsafe_allow_html=True) 
+                
         # Display the loader
         with st.spinner("Running Process..."):
                     uploaded_file_paths = [extract_pdf_data(
