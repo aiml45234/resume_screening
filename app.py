@@ -393,22 +393,22 @@ with tab1:
 
         # Display the loader
         with st.spinner("Loading..."):
-        uploaded_file_paths = [extract_pdf_data(
-        file) for file in uploaded_files]                          
-        score = compare(uploaded_file_paths, JD, flag)
-        if score is not None:
-          success_placeholder = st.empty()
-          success_placeholder.success("Analysis completed successfully! Wait for few seconds for generating results")
-          # Wait for 5 seconds
-          time.sleep(10)
-          # Remove the success message
-          success_placeholder.empty()
-          success_placeholder.success("Process completed! Please go to results tab")
-          # Wait for 5 seconds
-          time.sleep(5)
-          # Remove the success message
-          success_placeholder.empty()
-          # st.success("Analysis done! Please go to results tab.")  
+                    uploaded_file_paths = [extract_pdf_data(
+                    file) for file in uploaded_files]                          
+                    score = compare(uploaded_file_paths, JD, flag)
+                    if score is not None:
+                      success_placeholder = st.empty()
+                      success_placeholder.success("Analysis completed successfully! Wait for few seconds for generating results")
+                      # Wait for 5 seconds
+                      time.sleep(10)
+                      # Remove the success message
+                      success_placeholder.empty()
+                      success_placeholder.success("Process completed! Please go to results tab")
+                      # Wait for 5 seconds
+                      time.sleep(5)
+                      # Remove the success message
+                      success_placeholder.empty()
+                      # st.success("Analysis done! Please go to results tab.")  
     else:
         start_analysis()
     if reloads:
