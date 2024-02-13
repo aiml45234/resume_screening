@@ -391,7 +391,15 @@ with tab1:
                 width: 100%;
                 margin: 0px auto;
                 justify-content: center;
-            }             
+            }
+            .st-emotion-cache-ti38eq {
+                width: 704px;
+                /* position: absolute; */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -1350%);
+            }
             
             </style>
             """, unsafe_allow_html=True) 
