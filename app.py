@@ -322,10 +322,10 @@ set_main_style("main_bg.png")
 font_css = """
 <style>
 button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
-  font-size: 20px;
+  font-size: 15px;
   background-color: %s;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
   
 }
 </style>
