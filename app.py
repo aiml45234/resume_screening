@@ -119,6 +119,13 @@ def set_main_style(side_bg):
         background: rgba(0,0,0,0);
         display: none;
       }}
+      [data-testid="stMarkdownContainer"] {{
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }}
+      
       
       
       </style>
@@ -377,21 +384,7 @@ with tab1:
     # reloads = st.button("Reset Page")
           
     if comp_pressed and uploaded_files:
-        custom_css = """
-            <style>
-            /* Center the loader */
-            .spinner-container {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-             }
-            </style>
-            """
-            
-            # Inject custom CSS into Streamlit app
-        st.markdown(custom_css, unsafe_allow_html=True)
-
+        
         # Display the loader
         with st.spinner("Running Process..."):
                     uploaded_file_paths = [extract_pdf_data(
