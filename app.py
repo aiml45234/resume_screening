@@ -60,10 +60,7 @@ st.markdown("""
     # margin-top: 1rem;
     margin-top:  -50px;
 }
-.st-emotion-cache-1n76uvr
-{
-     gap:0rem;
-}
+
 </style>
 """, unsafe_allow_html=True)
 
