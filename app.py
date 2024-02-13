@@ -456,5 +456,9 @@ with tab2:
                 with open(file_path, "rb") as file:
                     file_contents = file.read()
                     st.write(download_pdf(file_contents, key), unsafe_allow_html=True)
-                
+        if score_result == 0:
+           success_placeholder = st.empty()
+           success_placeholder.success("No Matched Result Found!")
+                      # Wait for 5 seconds
+           time.sleep(10)          
         
