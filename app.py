@@ -22,7 +22,7 @@ import shutil
 import time
 
 
-st.set_page_config(page_title="Resume Screening Helper")
+st.set_page_config(page_title="Resume Screening Helper", page_icon="fav_icon.png")
 uploaded_file_path = ""
 rest_flag = False
 
