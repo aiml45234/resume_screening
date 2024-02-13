@@ -53,6 +53,13 @@ st.markdown("""
     # margin-top: 1rem;
     margin-top:  -120px;
 }
+.stSidebarUserContent
+{
+    # padding-top: 1rem;
+    # padding-bottom: 0rem;
+    # margin-top: 1rem;
+    margin-top:  -50px;
+}
 </style>
 """, unsafe_allow_html=True)
 
