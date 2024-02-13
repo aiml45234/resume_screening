@@ -51,7 +51,7 @@ st.markdown("""
     # padding-top: 1rem;
     # padding-bottom: 0rem;
     # margin-top: 1rem;
-    margin-top:  -120px;
+    margin-top:  -130px;
 }
 .st-emotion-cache-16txtl3 
 {
