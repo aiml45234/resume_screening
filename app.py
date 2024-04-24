@@ -1,10 +1,10 @@
 import sys
 import streamlit as st
 import pdfplumber
-import gensim
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+#import gensim
+#from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from nltk.tokenize import word_tokenize
-from gensim.models.doc2vec import Doc2Vec
+#from gensim.models.doc2vec import Doc2Vec
 import nltk
 from transformers import AutoTokenizer, AutoModel
 from sklearn.metrics.pairwise import cosine_similarity
@@ -218,24 +218,24 @@ def reload_page():
             st.markdown("<meta http-equiv='refresh' content='0'>", unsafe_allow_html=True)
 
 @st.cache_data
-def get_doc2vec_embeddings(JD, text_resume):
-    nltk.download("punkt")
-    data = [JD]
-    resume_embeddings = []
+# def get_doc2vec_embeddings(JD, text_resume):
+#     nltk.download("punkt")
+#     data = [JD]
+#     resume_embeddings = []
     
-    tagged_data = [TaggedDocument(words=word_tokenize(_d.lower()), tags=[str(i)]) for i, _d in enumerate(data)]
-    #print (tagged_data)
+#     tagged_data = [TaggedDocument(words=word_tokenize(_d.lower()), tags=[str(i)]) for i, _d in enumerate(data)]
+#     #print (tagged_data)
 
-    model = gensim.models.doc2vec.Doc2Vec(vector_size=512, min_count=3, epochs=80)
-    model.build_vocab(tagged_data)
-    model.train(tagged_data, total_examples=model.corpus_count, epochs=80)
-    JD_embeddings = np.transpose(model.docvecs['0'].reshape(-1,1))
+#     model = gensim.models.doc2vec.Doc2Vec(vector_size=512, min_count=3, epochs=80)
+#     model.build_vocab(tagged_data)
+#     model.train(tagged_data, total_examples=model.corpus_count, epochs=80)
+#     JD_embeddings = np.transpose(model.docvecs['0'].reshape(-1,1))
 
-    for i in text_resume:
-        text = word_tokenize(i.lower())
-        embeddings = model.infer_vector(text)
-        resume_embeddings.append(np.transpose(embeddings.reshape(-1,1)))
-    return (JD_embeddings, resume_embeddings)
+#     for i in text_resume:
+#         text = word_tokenize(i.lower())
+#         embeddings = model.infer_vector(text)
+#         resume_embeddings.append(np.transpose(embeddings.reshape(-1,1)))
+#     return (JD_embeddings, resume_embeddings)
 
 
 
