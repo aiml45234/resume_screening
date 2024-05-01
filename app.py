@@ -239,11 +239,11 @@ def reload_page():
 
 
 @st.cache_data
-def cosine(embeddings1, embeddings2):
+def cosine(_embeddings1, _embeddings2):
   # get the match percentage
   score_list = []
-  for i in embeddings1:
-      matchPercentage = cosine_similarity(np.array(i), np.array(embeddings2))
+  for i in _embeddings1:
+      matchPercentage = cosine_similarity(np.array(i), np.array(_embeddings2))
       matchPercentage = np.round(matchPercentage, 4)*100 # round to two decimal
       print("Your resume matches about" + str(matchPercentage[0])+ "% of the job description.")
       score_list.append(str(matchPercentage[0][0]))
