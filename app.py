@@ -238,7 +238,7 @@ def reload_page():
 #     return (JD_embeddings, resume_embeddings)
 
 
-
+@st.cache_data
 def cosine(embeddings1, embeddings2):
   # get the match percentage
   score_list = []
