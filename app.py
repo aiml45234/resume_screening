@@ -173,8 +173,8 @@ def mean_pooling(model_output, attention_mask):
 def get_HF_embeddings(sentences):
 
   # Load model from HuggingFace Hub   bert-large-nli-mean-tokens all-mpnet-base-v2 all-MiniLM-L6-v2 paraphrase-multilingual-MiniLM-L12-v2
-  tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
-  model = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+  tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-mpnet-base-v2')
+  model = AutoModel.from_pretrained('sentence-transformers/all-mpnet-base-v2')
   # Tokenize sentences
   encoded_input = tokenizer(sentences, padding=True, truncation=True, return_tensors='pt', max_length=512)
   # Compute token embeddings
@@ -217,33 +217,33 @@ def reload_page():
             st.session_state.upload = ""
             st.markdown("<meta http-equiv='refresh' content='0'>", unsafe_allow_html=True)
 
-@st.cache_data
-# def get_doc2vec_embeddings(JD, text_resume):
-#     nltk.download("punkt")
-#     data = [JD]
-#     resume_embeddings = []
+# @st.cache_data
+def get_doc2vec_embeddings(JD, text_resume):
+    nltk.download("punkt")
+    data = [JD]
+    resume_embeddings = []
     
-#     tagged_data = [TaggedDocument(words=word_tokenize(_d.lower()), tags=[str(i)]) for i, _d in enumerate(data)]
-#     #print (tagged_data)
+    tagged_data = [TaggedDocument(words=word_tokenize(_d.lower()), tags=[str(i)]) for i, _d in enumerate(data)]
+    #print (tagged_data)
 
-#     model = gensim.models.doc2vec.Doc2Vec(vector_size=512, min_count=3, epochs=80)
-#     model.build_vocab(tagged_data)
-#     model.train(tagged_data, total_examples=model.corpus_count, epochs=80)
-#     JD_embeddings = np.transpose(model.docvecs['0'].reshape(-1,1))
+    model = gensim.models.doc2vec.Doc2Vec(vector_size=512, min_count=3, epochs=80)
+    model.build_vocab(tagged_data)
+    model.train(tagged_data, total_examples=model.corpus_count, epochs=80)
+    JD_embeddings = np.transpose(model.docvecs['0'].reshape(-1,1))
 
-#     for i in text_resume:
-#         text = word_tokenize(i.lower())
-#         embeddings = model.infer_vector(text)
-#         resume_embeddings.append(np.transpose(embeddings.reshape(-1,1)))
-#     return (JD_embeddings, resume_embeddings)
+    for i in text_resume:
+        text = word_tokenize(i.lower())
+        embeddings = model.infer_vector(text)
+        resume_embeddings.append(np.transpose(embeddings.reshape(-1,1)))
+    return (JD_embeddings, resume_embeddings)
 
 
-@st.cache_data
-def cosine(_embeddings1, _embeddings2):
+
+def cosine(embeddings1, embeddings2):
   # get the match percentage
   score_list = []
-  for i in _embeddings1:
-      matchPercentage = cosine_similarity(np.array(i), np.array(_embeddings2))
+  for i in embeddings1:
+      matchPercentage = cosine_similarity(np.array(i), np.array(embeddings2))
       matchPercentage = np.round(matchPercentage, 4)*100 # round to two decimal
       print("Your resume matches about" + str(matchPercentage[0])+ "% of the job description.")
       score_list.append(str(matchPercentage[0][0]))
