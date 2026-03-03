@@ -128,20 +128,32 @@ def set_main_style(side_bg):
       """,
       unsafe_allow_html=True,
       )
-
+            
+@st.cache_resource
+def load_bart():
+    model = BartForConditionalGeneration.from_pretrained("sshleifer/distilbart-cnn-12-6")
+    tokenizer = BartTokenizer.from_pretrained("sshleifer/distilbart-cnn-12-6")
+    return model, tokenizer
 
 def summary_text(resume):
-  # sentence-transformers/all-mpnet-base-v2
-  model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
-  tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
+    model, tokenizer = load_bart()
 
-   # Tokenize the input text
-  inputs = tokenizer(resume, max_length=1024, return_tensors="pt", truncation=True)
+    inputs = tokenizer(
+        resume,
+        max_length=1024,
+        return_tensors="pt",
+        truncation=True
+    )
 
-    # Generate the summary
-  summary_ids = model.generate(inputs.input_ids, num_beams=4, max_length=150, early_stopping=True)
-  summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-  return summary
+    summary_ids = model.generate(
+        inputs.input_ids,
+        num_beams=4,
+        max_length=150,
+        early_stopping=True
+    )
+
+    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    return summary
 
 def compare(resume_texts, JD_text, flag='HuggingFace-BERT'):
     JD_embeddings = None
@@ -454,4 +466,5 @@ with tab2:
                     st.write(download_pdf(file_contents, key), unsafe_allow_html=True)
        
         
+
 
