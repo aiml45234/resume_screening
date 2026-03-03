@@ -315,7 +315,7 @@ with st.sidebar:
        
     
     # st.image("res_tf.png")
-    original_title = '<p style="color:#000000; text-align: center; margin-top: 20px; font-size: 17px;"><b>Techforce Global © 2024 </b></p>'
+    original_title = '<p style="color:#000000; text-align: center; margin-top: 20px; font-size: 17px;"><b>Techforce Global © 2026 </b></p>'
     st.markdown(original_title, unsafe_allow_html=True)
     
 
